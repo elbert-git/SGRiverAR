@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@100;300;500;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* ------------- basics */
+*{
+  padding: 0; margin: 0;
+}
+html{
+  background: radial-gradient(rgb(255, 255, 255), rgb(53, 53, 58));
+}
+html,body{
+  height: 100vh; width: 100vw;
+}
+
+
+
+/* a-frame stuff */
+.a-enter-vr, .a-enter-ar{
+  display: none !important;
+}
+
+.aFrameCanvas{
+}
+
+
+
+/* infodiv */
+body{
+  display: flex;
+  flex-direction: column;
+}
+.infoDivRoot{
+  background-color: white;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoDivRoot h1{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 2em;
+}
+.infoDivRoot div {
+  text-align: center;
+  padding: 1em 0em;
+  font-size: 1.5em;
+
+  width: 80%;
+}
+.infoDivRoot button{
+  color: white;
+  border-radius: 1rem;
+  background-color: black;
+  outline: none;
+  font-size: 1.5em;
+  padding: 1rem 2rem;
+   
+  margin-bottom: 1em;
+   
+  transition: 0.3s;
+}
+ 
+.infoDivRoot button:active{
+  transform: scale(0.9);
+}
+
+.horizLine{
+  height: 0.1rem !important;
+  width: 80% !important;
+  background-color: black;
+  padding: 0 !important
+}
+
+.serif{
+  font-family: 'Noto Serif Telugu', serif;
+}
+.oswald{
+  font-family: 'Oswald', sans-serif;
+}

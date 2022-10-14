@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Singapore River</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./stylesheet.css">
+   
+  <!-- aframe -->
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- a-frame extras -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <!-- orbit controls -->
+  <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script> 
+</head>
+<body>
+    <!-- a-frame scene--> 
+    <a-scene class="aFrameCanvas" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#model;" embedded vr-mode-ui="enterARButton: #ARButton;">
+      <a-assets>
+        <a-asset-item id="cityModel" src="./assets/exportingPrototype.glb"></a-asset-item>
+      </a-assets>
+      <a-entity id="model" gltf-model="#cityModel" animation-mixer="clip:anim;"></a-entity>
+      <a-entity camera look-control="gyroEnabled: false" orbit-controls="target: 0 0 0; minDistance: 0.5; maxDistance: 180; initialPosition: 0 1.5 5"></a-entity>
+      <a-entity light="type: hemisphere; color: #c9c9c9; groundColor: #333333; intensity: 3"></a-entity>
+    </a-scene>
+     
+    <!-- information div -->
+    <div class="infoDivRoot">
+      <h1 class="serif">The Singapore River</h1>
+      <div class="horizLine"></div>
+      <div class="">The Singapore river has been the literal center of singapore’s core identity. From a source of water, transport and income.</div>
+      <button id="ARButton" class="oswald" href="#">Tap for AR</button>
+    </div>
+</body>
+</html>
