@@ -18,11 +18,16 @@
 </head>
 <body>
     <!-- a-frame scene--> 
-    <a-scene class="aFrameCanvas" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#model;" embedded vr-mode-ui="enterARButton: #ARButton;">
+    <a-scene class="aFrameCanvas" webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#model;type=footprint" embedded vr-mode-ui="enterARButton: #ARButton;">
       <a-assets>
         <a-asset-item id="cityModel" src="./assets/exportingPrototype.glb"></a-asset-item>
       </a-assets>
-      <a-entity id="model" gltf-model="#cityModel" animation-mixer="clip:anim;" scale="0.5 0.5 0.5"></a-entity>
+
+      <!-- model -->
+      <a-entity id="model">
+        <a-entity gltf-model="#cityModel" animation-mixer="clip:anim;" scale="0.25 0.25 0.25"></a-entity>
+      </a-entity>
+
       <a-entity camera look-control="gyroEnabled: false" orbit-controls="target: 0 0 0; minDistance: 0.5; maxDistance: 180; initialPosition: 0 1.5 5"></a-entity>
       <a-entity light="type: hemisphere; color: #c9c9c9; groundColor: #333333; intensity: 3"></a-entity>
     </a-scene>
